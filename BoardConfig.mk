@@ -120,3 +120,37 @@ BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
+
+# SHRP Flags
+# Device codename
+SHRP_DEVICE_CODE := lisa
+# Path of your SHRP device tree
+SHRP_PATH := device/xiaomi/$(SHRP_DEVICE_CODE)
+# Maintainer name
+SHRP_MAINTAINER := "Himanshu Raj (@hraj9258)"
+# Recovery Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_REC_TYPE := SAR
+SHRP_DEVICE_TYPE := A/B
+# Your device's recovery path, dont use blindly
+#SHRP_REC := /dev/block/bootdevice/by-name/recovery
+# internal storage path
+SHRP_INTERNAL := /sdcard
+# If your device has an external sdcard
+SHRP_EXTERNAL := /external_sd
+# USB OTG path
+SHRP_OTG := /usb_otg
+# Flashlight: (0 = disable, 1 = enable)
+SHRP_FLASH := 1
+# SHRP padding flag (for rounded corner devices only)
+#SHRP_STATUSBAR_RIGHT_PADDING := 210
+# For notch devices
+SHRP_NOTCH := true
+# SHRP Dark mode, use this flag to have dark theme set by default
+SHRP_DARK := true
+# Addon - Clear Fingerprint (remove fingerprint lock from system)
+SHRP_SKIP_DEFAULT_ADDON_3 := true
+#SHRP_OFFICIAL := true
+SHRP_AB := true
+SHRP_EXPRESS := true
+SHRP_EXPRESS_USE_DATA := true
